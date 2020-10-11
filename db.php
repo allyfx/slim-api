@@ -47,3 +47,12 @@ $db->table($tabela)->insert([
 	'created_at' => '2020-10-10',
 	'updated_at' => '2020-10-10',
 ]);
+
+// Create Usuario table
+$schema->create('usuarios', function($table) {
+	$table->increments('id');
+	$table->string('nome');
+	$table->string('email');
+	$table->string('senha');
+	$table->timestamps();
+});
